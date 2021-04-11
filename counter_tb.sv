@@ -12,7 +12,6 @@ module counter%WIDTH%_tb;
     logic n_rst;
     logic n_en;
     logic [WIDTH-1:0] count;
-    logic [WIDTH-1:0] prev_count;
     logic [WIDTH-1:0] trig_out;
 
     default clocking cb @(posedge clk);
@@ -76,7 +75,5 @@ module counter%WIDTH%_tb;
     );
 
     always #5 clk = ~clk;
-
-    always_ff @(posedge clk) prev_count <= count;
 
 endmodule
