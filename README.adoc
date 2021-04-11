@@ -6,6 +6,8 @@ v1.0, 2021-04-10
 :imagesdir: Images
 :homepage: https://github.com/miura-katsuyoshi/LFSR
 
+== Description
+
 Parameterized counter with single-cycle trigger output in SystemVerilog.
 
 This is a simple binary counter implemented in SystemVerilog.  The bit width of the counter can be spefified by the parameter _WIDTH_.  It has trigger outputs _trig_out_.  The output _trig_out[i]_ becomes 1 when _count[i]_ goes to 0 from 1.  The pulse width of _trig_out[i]_ is single cycle even if counting up is disabled by deasserting _n_en_ during _trig_out[i]_=1.
